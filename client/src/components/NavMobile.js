@@ -34,6 +34,11 @@ function MobNav () {
                     </div> 
                     : null }
             <Link to="contact">Contact</Link>
+
+            <div id="mob-nav-bottom">
+                <h5>Email</h5>
+                <h5>Phone</h5>
+            </div>
         </div>
     )
 }
