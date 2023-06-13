@@ -21,7 +21,7 @@ function Header ( ){
             </Link>
 
             {isDesktop ? <Nav /> : <h3 onClick={handleMobileDisplay}>Menu</h3>} 
-            {displayMobNav ? <MobNav /> : null}
+            {displayMobNav ? <MobNav handleMobileDisplay={handleMobileDisplay}/> : null}
         </div>
     )
 }

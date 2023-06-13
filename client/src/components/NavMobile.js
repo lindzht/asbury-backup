@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import { useState } from "react";
 
 
-function MobNav () {
+function MobNav ({handleMobileDisplay}) {
 
     const [displayShowSub, setDisplayShowSub] = useState(false);
     const [displayOppSub, setDisplayOppSub] = useState(false);
@@ -17,27 +17,30 @@ function MobNav () {
 
     return(
         <div id="mob-nav-container">
-            <Link to="about">About</Link>
-            <h3 onClick={handleDisplayShow}>Shows +</h3>
-                {displayShowSub ? 
-                    <div className="sub-nav">  
-                        <Link to="upcoming"> —Upcoming Shows</Link>
-                        <Link to="past"> —Past Shows</Link>  
-                    </div> 
-                : null }
-            <h3 onClick={handleDisplayOpp}>Opportunities +</h3>
-                {displayOppSub ? 
-                    <div className="sub-nav">   
-                        <Link to="booking"> —Book Us</Link>
-                        <Link to="sponsorship"> —Sponsorship</Link>
-                        <Link to="submissions"> —Submissions</Link>
-                    </div> 
+            <div id="mob-nav-content">
+                <h3 onClick={handleMobileDisplay}>{"<<<"}</h3>
+                <Link to="about" onClick={handleMobileDisplay}>About</Link>
+                <h3 onClick={handleDisplayShow}>Shows +</h3>
+                    {displayShowSub ? 
+                        <div className="sub-nav">  
+                            <Link to="upcoming" onClick={handleMobileDisplay}> —Upcoming Shows</Link>
+                            <Link to="past" onClick={handleMobileDisplay}> —Past Shows</Link>  
+                        </div> 
                     : null }
-            <Link to="contact">Contact</Link>
+                <h3 onClick={handleDisplayOpp}>Opportunities +</h3>
+                    {displayOppSub ? 
+                        <div className="sub-nav">   
+                            <Link to="booking" onClick={handleMobileDisplay}> —Book Us</Link>
+                            <Link to="sponsorship" onClick={handleMobileDisplay}> —Sponsorship</Link>
+                            <Link to="submissions" onClick={handleMobileDisplay}> —Submissions</Link>
+                        </div> 
+                        : null }
+                <Link to="contact" onClick={handleMobileDisplay}>Contact</Link>
 
-            <div id="mob-nav-bottom">
-                <h5>Email</h5>
-                <h5>Phone</h5>
+                <div id="mob-nav-bottom">
+                    <h5>Email</h5>
+                    <h5>Phone</h5>
+                </div>
             </div>
         </div>
     )
