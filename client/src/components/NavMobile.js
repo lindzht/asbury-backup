@@ -19,6 +19,9 @@ function MobNav ({handleMobileDisplay}) {
         <div id="mob-nav-container">
             <div id="mob-nav-content">
                 <h3 onClick={handleMobileDisplay}>{"<<<"}</h3>
+                <Link to="/" onClick={handleMobileDisplay}>Home</Link>
+                <br />
+                <br />
                 <Link to="about" onClick={handleMobileDisplay}>About</Link>
                 <h3 onClick={handleDisplayShow}>Shows +</h3>
                     {displayShowSub ? 
