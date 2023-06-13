@@ -8,7 +8,7 @@ function TextBlock({title, content, img}) {
                 {img ? <img src={img} alt="test"/> : null}
             </div>
             <div className="t-right">
-                <p>{content}</p>
+                <>{content}</>
             </div>
         </article>
     )
