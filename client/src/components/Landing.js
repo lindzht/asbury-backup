@@ -15,7 +15,7 @@ function LandingPage () {
 
             <Slideshow />
 
-            <button type="button" class="btn">Join Our Mailing List</button>
+            <button type="button" className="btn">Join Our Mailing List</button>
 
             
         </div>
