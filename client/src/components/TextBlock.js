@@ -1,10 +1,15 @@
 
 
-function TextBlock({title, content}) {
+function TextBlock({title, content, img}) {
     return(
         <article className="text-block">
-            <h1>{title}</h1>
-            <p>{content}</p>
+            <div className="t-left">
+                <h1>{title}</h1>
+                {img ? <img src={img} alt="test"/> : null}
+            </div>
+            <div className="t-right">
+                <p>{content}</p>
+            </div>
         </article>
     )
 }
