@@ -41,8 +41,8 @@ function MobNav ({handleMobileDisplay}) {
                 <Link to="contact" onClick={handleMobileDisplay}>Contact</Link>
 
                 <div id="mob-nav-bottom">
-                    <h5>Email</h5>
-                    <h5>Phone</h5>
+                    <h5><strong>Email:</strong> dougleclaire54@yahoo.com</h5>
+                    <h5><strong>Phone:</strong> +1.718.510.6929</h5>
                 </div>
             </div>
         </div>
