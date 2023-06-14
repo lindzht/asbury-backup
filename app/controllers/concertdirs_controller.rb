@@ -1,0 +1,2 @@
+class ConcertdirsController < ApplicationController
+end
