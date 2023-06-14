@@ -1,11 +1,18 @@
-
 import Slideshow from "./Slideshow";
 
 
 function LandingPage () {
+    
+    const time = 3000
+    const slideshow1 = [
+        "https://www.syfy.com/sites/syfy/files/styles/amp_featured_image/public/2019/10/faceoff_cage.jpg?h=ba463b8a",
+        "https://i.ytimg.com/vi/diQhM7HLNG8/maxresdefault.jpg",
+        "https://s3.crackedcdn.com/phpimages/article/4/0/1/820401.jpg",
+    ]
+
     return(
         <div id="landing-container">
-            <Slideshow />
+            <div id="l-hero-s"> <Slideshow images={slideshow1} time={time}/></div>
             
             <div id="landing-about">
                 <h2>Asbury Shorts USA</h2>
@@ -13,7 +20,7 @@ function LandingPage () {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/1362px-Placeholder_view_vector.svg.png?20220519031949" alt="placeholder" />
             </div>
 
-            <Slideshow />
+            <Slideshow images={slideshow1} time={time}/>
 
             <button type="button" className="btn">Join Our Mailing List</button>
 
