@@ -14,6 +14,7 @@ import BookUs from './components/BookUs';
 import Sponsors from './components/Sponsors';
 import Submissions from './components/Submissions';
 import Contact from './components/Contact';
+import NavMobile from './components/NavMobile';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="sponsorship" element={<Sponsors />}></Route>
           <Route path="submissions" element={<Submissions />}></Route>
           <Route path="contact" element={<Contact />}></Route>
+          <Route path="menu" element={<NavMobile />}></Route>
         </Routes>
       
       <Footer />
